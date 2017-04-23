@@ -10,6 +10,7 @@ ENV PACKAGE github.com/jpillora/cloud-torrent
 ENV PACKAGE_DIR $GOPATH/src/$PACKAGE
 
 #install go and godep, then compile cloud-torrent using godep, then wipe build tools
+#validate the ENV path
 RUN apk update && \
     apk add git go gzip && \
     go get github.com/tools/godep && \
